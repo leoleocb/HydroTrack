@@ -12,12 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HydroTrack">
 
-
+        <!-- Actividades principales -->
+        <activity android:name=".EditarPerfilActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".HistorialActivity" />
-
-        <!-- Esta será la primera pantalla al abrir la app -->
-        <activity android:name=".RegistroActivity"
+        <activity
+            android:name=".RegistroActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,11 +25,9 @@
             </intent-filter>
         </activity>
 
-        <!-- Necesario para la notificación -->
+        <!-- Receptor de notificaciones -->
         <receiver android:name=".RecordatorioReceiver" />
 
-
     </application>
-
 
 </manifest>

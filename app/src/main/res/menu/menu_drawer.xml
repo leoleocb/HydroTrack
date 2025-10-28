@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_inicio"
+            android:title="Inicio"
+            android:icon="@drawable/ic_home" />
+
+        <item
+            android:id="@+id/nav_editar"
+            android:title="Editar perfil"
+            android:icon="@drawable/ic_person" />
+
+        <item
+            android:id="@+id/nav_historial"
+            android:title="Historial"
+            android:icon="@drawable/ic_calendar" />
+
+        <item
+            android:id="@+id/nav_salir"
+            android:title="Cerrar sesión"
+            android:icon="@drawable/ic_logout" />
+    </group>
+</menu>
