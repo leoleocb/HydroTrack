@@ -1,23 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:background="@color/teal_700"
+    android:background="#1b5486"
     android:padding="24dp"
     android:layout_width="match_parent"
-    android:layout_height="160dp"
-    android:gravity="bottom">
+    android:layout_height="180dp"
+    android:gravity="center_vertical">
 
+    <!-- Logo redondo -->
     <ImageView
+        android:id="@+id/ivHeaderLogo"
         android:src="@mipmap/ic_launcher_round"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:contentDescription="Logo" />
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="Logo de HydroTrack"
+        android:layout_marginBottom="8dp" />
 
+    <!-- Nombre del usuario o título -->
     <TextView
         android:id="@+id/tvHeaderNombre"
-        android:text="HydroTrack"
+        android:text="Leandro"
         android:textColor="@android:color/white"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Subtítulo o nombre de la app -->
+    <TextView
+        android:id="@+id/tvHeaderSubtitulo"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
 </LinearLayout>
