@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarEstadisticas"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#1b5486"
+        android:title="HydroTrack 💧"
+        android:titleTextColor="@android:color/white"
+        app:titleTextColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Contenedor principal con borde y fondo suave -->
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#E3F2FD"
+        android:padding="24dp"
+        android:layout_marginTop="32dp"
+        android:elevation="4dp"
+        android:clipToOutline="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="20dp"
+        android:layoutDirection="ltr"
+        android:backgroundTintMode="src_in"
+        android:shape="rectangle"
+        app:layout_constraintTop_toBottomOf="@id/toolbarEstadisticas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:text="Resumen de tu Progreso"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#0D47A1"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Meta diaria -->
+        <TextView
+            android:id="@+id/tvMetaActual"
+            android:text="Meta diaria: -- ml"
+            android:textSize="18sp"
+            android:textColor="#1976D2"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Cantidad tomada hoy -->
+        <TextView
+            android:id="@+id/tvCantidadHoy"
+            android:text="Hoy has tomado: -- ml"
+            android:textSize="18sp"
+            android:textColor="#2196F3"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Porcentaje actual -->
+        <TextView
+            android:id="@+id/tvPorcentaje"
+            android:text="Progreso: --%"
+            android:textSize="18sp"
+            android:textColor="#0D47A1"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Días cumplidos -->
+        <TextView
+            android:id="@+id/tvDiasCumplidos"
+            android:text="Días cumplidos este mes: --"
+            android:textSize="18sp"
+            android:textColor="#1565C0"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Mensaje motivacional -->
+        <TextView
+            android:id="@+id/tvMensaje"
+            android:text="¡Sigue así! Mantente hidratado 💧"
+            android:textSize="17sp"
+            android:textStyle="italic"
+            android:textColor="#1b5486"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

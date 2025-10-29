@@ -47,7 +47,7 @@ class HistorialActivity : AppCompatActivity() {
 
                 val shape = GradientDrawable()
                 shape.shape = GradientDrawable.OVAL
-                shape.setColor(0xFF2196F3.toInt()) // Azul brillante
+                shape.setColor(0xFF2196F3.toInt())
                 shape.setSize(18, 18)
 
                 eventos.add(EventDay(calendar, shape))

@@ -33,7 +33,7 @@ class EditarPerfilActivity : AppCompatActivity() {
                 .putInt("metaAgua", meta)
                 .apply()
 
-            Toast.makeText(this, "Datos actualizados ✅", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Datos actualizados ", Toast.LENGTH_SHORT).show()
             finish()
         }
     }
