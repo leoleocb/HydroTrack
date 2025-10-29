@@ -21,7 +21,7 @@
     <!-- Saludo -->
     <TextView
         android:id="@+id/tvSaludo"
-        android:text="Hola, Usuario 👋"
+        android:text="Hola, Usuario "
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#0D47A1"

@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        // --- Preferencias del usuario ---
+        //datos usuario
         val prefs = getSharedPreferences("usuario_prefs", MODE_PRIVATE)
         nombre = prefs.getString("nombre", "Usuario")
         metaDiaria = prefs.getInt("metaAgua", 0)
@@ -120,6 +120,10 @@ class MainActivity : AppCompatActivity() {
                     startActivity(Intent(this, HistorialActivity::class.java))
                     true
                 }
+                R.id.nav_estadisticas -> {
+                    startActivity(Intent(this, EstadisticasActivity::class.java))
+                    true
+                }
                 R.id.nav_salir -> {
                     prefs.edit().clear().apply()
                     startActivity(Intent(this, RegistroActivity::class.java))
@@ -137,7 +141,7 @@ class MainActivity : AppCompatActivity() {
         cantidadTomada += cantidad
         guardarProgreso()
         actualizarProgreso()
-        Toast.makeText(this, "+${cantidad}ml agregados 💧", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "+${cantidad}ml agregados ", Toast.LENGTH_SHORT).show()
     }
 
     private fun restarAgua(cantidad: Int) {
@@ -145,7 +149,7 @@ class MainActivity : AppCompatActivity() {
         if (cantidadTomada < 0) cantidadTomada = 0
         guardarProgreso()
         actualizarProgreso()
-        Toast.makeText(this, "-${cantidad}ml restados 💧", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "-${cantidad}ml restados ", Toast.LENGTH_SHORT).show()
     }
 
     private fun abrirDialogoPersonalizado(esSuma: Boolean) {
@@ -185,7 +189,7 @@ class MainActivity : AppCompatActivity() {
         if (cantidadTomada >= metaDiaria) {
             if (!prefs.getBoolean(fechaHoy, false)) {
                 prefs.edit().putBoolean(fechaHoy, true).apply()
-                Toast.makeText(this, "🎉 ¡Meta diaria alcanzada! 💧", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "🎉 ¡Meta diaria alcanzada! 🎉", Toast.LENGTH_LONG).show()
             }
         } else if (prefs.getBoolean(fechaHoy, false)) {
             prefs.edit().putBoolean(fechaHoy, false).apply()

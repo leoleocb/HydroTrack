@@ -12,10 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HydroTrack">
 
-        <!-- Actividades principales -->
+        <!-- pantallas -->
         <activity android:name=".EditarPerfilActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".HistorialActivity" />
+        <activity android:name=".EstadisticasActivity" />
         <activity
             android:name=".RegistroActivity"
             android:exported="true">
